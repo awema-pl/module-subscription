@@ -28,7 +28,7 @@
         "awema-pl/module-form-builder": "dev-master",
         "awema-pl/module-indigo-layout": "dev-master",
         "awema-pl/module-localization-helper": "dev-master",
-        "awema-pl/module-modal-window": "dev-master",
+        "awema-pl/module-content-window": "dev-master",
         "awema-pl/module-navigation": "dev-master",
         "awema-pl/module-page-map": "dev-master",
         "awema-pl/module-permission": "dev-master",

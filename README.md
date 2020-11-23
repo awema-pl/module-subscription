@@ -84,3 +84,4 @@ php artisan vendor:publish --provider="AwemaPL\Subscription\SubscriptionServiceP
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
+ 

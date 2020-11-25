@@ -65,7 +65,7 @@
 @endsection
 
 @section('modals')
-    <content-window name="create" class="modal_formbuilder" title="{{ _p('subscription::pages.option.create_option', 'Create option') }}">
+    <modal-window name="create" class="modal_formbuilder" title="{{ _p('subscription::pages.option.create_option', 'Create option') }}">
         <form-builder url="{{ route('subscription.option.store') }}" @sended="AWEMA.emit('content::options_table:update')">
             <div class="grid">
                 <div class="cell">
@@ -75,9 +75,9 @@
                 </div>
             </div>
         </form-builder>
-    </content-window>
+    </modal-window>
 
-    <content-window name="edit_option" class="modal_formbuilder" title="{{ _p('subscription::pages.option.edit_option', 'Edit option') }}">
+    <modal-window name="edit_option" class="modal_formbuilder" title="{{ _p('subscription::pages.option.edit_option', 'Edit option') }}">
         <form-builder url="{{ route('subscription.option.update') }}/{id}" method="patch"
                       @sended="AWEMA.emit('content::options_table:update')"
                       send-text="{{ _p('subscription::pages.option.save', 'Save') }}" store-data="editOption">
@@ -89,9 +89,9 @@
                 </div>
             </div>
         </form-builder>
-    </content-window>
+    </modal-window>
 
-    <content-window name="delete_option" class="modal_formbuilder" title="{{  _p('subscription::pages.option.are_you_sure_delete', 'Are you sure delete?') }}">
+    <modal-window name="delete_option" class="modal_formbuilder" title="{{  _p('subscription::pages.option.are_you_sure_delete', 'Are you sure delete?') }}">
         <form-builder :edited="true" url="{{route('subscription.option.delete') }}/{id}" method="delete"
                       @sended="AWEMA.emit('content::options_table:update')"
                       send-text="{{ _p('subscription::pages.option.confirm', 'Confirm') }}" store-data="deleteOption"
@@ -100,5 +100,5 @@
                         {{ _p('subscription::pages.option.all_memberships_for_this_option_will_be_delete', 'All memberships for this option will be delete.') }}
                     </div>
         </form-builder>
-    </content-window>
+    </modal-window>
 @endsection

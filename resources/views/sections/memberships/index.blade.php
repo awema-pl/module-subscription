@@ -84,7 +84,7 @@
 @endsection
 
 @section('modals')
-    <content-window name="create" class="modal_formbuilder" title="{{ _p('subscription::pages.membership.create_membership', 'Create membership') }}">
+    <modal-window name="create" class="modal_formbuilder" title="{{ _p('subscription::pages.membership.create_membership', 'Create membership') }}">
         <form-builder url="{{ route('subscription.membership.store') }}" @sended="AWEMA.emit('content::memberships_table:update')">
             <div class="grid">
                 <div class="cell">
@@ -99,9 +99,9 @@
                 </div>
             </div>
         </form-builder>
-    </content-window>
+    </modal-window>
 
-    <content-window name="edit_membership" class="modal_formbuilder" title="{{ _p('subscription::pages.membership.edit_membership', 'Edit membership') }}">
+    <modal-window name="edit_membership" class="modal_formbuilder" title="{{ _p('subscription::pages.membership.edit_membership', 'Edit membership') }}">
         <form-builder url="{{ route('subscription.membership.update') }}/{id}" method="patch"
                       @sended="AWEMA.emit('content::memberships_table:update')"
                       send-text="{{ _p('subscription::pages.membership.save', 'Save') }}" store-data="editMembership">
@@ -120,14 +120,14 @@
                 </div>
             </div>
         </form-builder>
-    </content-window>
+    </modal-window>
 
-    <content-window name="delete_membership" class="modal_formbuilder" title="{{  _p('subscription::pages.membership.are_you_sure_delete', 'Are you sure delete?') }}">
+    <modal-window name="delete_membership" class="modal_formbuilder" title="{{  _p('subscription::pages.membership.are_you_sure_delete', 'Are you sure delete?') }}">
         <form-builder :edited="true" url="{{route('subscription.membership.delete') }}/{id}" method="delete"
                       @sended="AWEMA.emit('content::memberships_table:update')"
                       send-text="{{ _p('subscription::pages.membership.confirm', 'Confirm') }}" store-data="deleteMembership"
                       disabled-dialog>
 
         </form-builder>
-    </content-window>
+    </modal-window>
 @endsection

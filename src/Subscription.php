@@ -191,7 +191,7 @@ class Subscription implements SubscriptionContract
     public function includeLangJs()
     {
         $lang = config('indigo-layout.frontend.lang', []);
-        $lang = array_merge_recursive($lang, app(\Illuminate\Contracts\Translation\Translator::class)->get('subscription::js'));
+        $lang = array_merge_recursive($lang, app(\Illuminate\Contracts\Translation\Translator::class)->get('subscription::js')?:[]);
         app('config')->set('indigo-layout.frontend.lang', $lang);
     }
 

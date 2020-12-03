@@ -35,9 +35,10 @@ class CreateSubscriptionMembershipsTable extends Migration
         Schema::table(config('subscription.database.tables.memberships'), function (Blueprint $table) {
             $table->dropUnique(['user_id']);
         });
-
+        
         Schema::table(config('subscription.database.tables.memberships'), function (Blueprint $table) {
             $table->dropForeign(['user_id']);
+            $table->dropForeign(['option_id']);
         });
 
         Schema::drop(config('subscription.database.tables.memberships'));

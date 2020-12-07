@@ -25,7 +25,7 @@ class EventSubscriber
        try{
            $user = $event->user;
            if (!$user->membership){
-               $option = Option::where('name', config('subscription.trial_option_name'))->firstOrFail();
+               $option = Option::firstOrCreate(['name' =>config('subscription.trial_option_name')], ['price'=>0.0]);
                $expiresAt = now();
                $expiresAt->addDays(config('subscription.trial_days'));
                Membership::create([

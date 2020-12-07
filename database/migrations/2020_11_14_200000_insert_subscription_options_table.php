@@ -25,6 +25,15 @@ class InsertSubscriptionOptionsTable extends Migration
                 ]
             );
         }
+        if (config('subscription.use_trial')){
+            DB::table($table)->insert(
+                [
+                    'name' => config('subscription.trial_option_name'),
+                    'price' => 0.0,
+                    'created_at' =>now(),
+                ]
+            );
+        }
     }
 
     /**
@@ -40,6 +49,11 @@ class InsertSubscriptionOptionsTable extends Migration
         foreach ($subscriptions as $subscription){
             DB::table($table)
                 ->where('name', $subscription['name'])
+                ->delete();
+        }
+        if (config('subscription.use_trial')){
+            DB::table($table)
+                ->where('name', config('subscription.trial_option_name'))
                 ->delete();
         }
     }

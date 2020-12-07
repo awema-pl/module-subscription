@@ -46,5 +46,19 @@ return [
         "are_you_sure_delete" => "Are you sure delete?",
         "confirm" => "Confirm",
         "all_memberships_for_this_option_will_be_delete" => "All memberships for this option will be delete."
+    ],
+    "widget" => [
+        "membership" => [
+            "information_paid_access" => "Information on paid access to services.",
+            "subscription" => "Subscription",
+            "subscription_expiration_date" => "Subscription expiration date",
+            "subscription_will_expire" => "Subscription will expire",
+            "your_subscription" => "Your subscription",
+            "subscription_has_expired" => "Subscription has expired",
+            "standard" => "Standard",
+            "no_subscription" => "No subscription",
+            "trial" => "Trial",
+            "days_left_until_expiry" => "Days left until expiry"
+        ]
     ]
 ];

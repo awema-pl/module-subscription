@@ -92,4 +92,19 @@ return [
             ],
         ]
     ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Use trial
+    |--------------------------------------------------------------------------
+    |
+    | Add option "Trial" to database and auto create membership for register
+    | user.
+    |
+    */
+    'use_trial' =>'true',
+
+    'trial_option_name' =>'Trial',
+
+    'trial_days' =>14,
 ];

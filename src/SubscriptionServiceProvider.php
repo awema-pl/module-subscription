@@ -4,6 +4,7 @@ namespace AwemaPL\Subscription;
 
 use AwemaPL\BaseJS\AwemaProvider;
 use AwemaPL\Navigation\Middlewares\AddNavigationComponent;
+use AwemaPL\Subscription\Listeners\EventSubscriber;
 use AwemaPL\Subscription\Sections\Creators\Repositories\Contracts\HistoryRepository;
 use AwemaPL\Subscription\Sections\Creators\Repositories\EloquentHistoryRepository;
 use AwemaPL\Subscription\Sections\Installations\Http\Middleware\GlobalMiddleware;
@@ -20,6 +21,7 @@ use AwemaPL\Subscription\Sections\Options\Repositories\EloquentOptionRepository;
 use AwemaPL\Subscription\Sections\Subscriptions\Repositories\Contracts\SubscriptionRepository;
 use AwemaPL\Subscription\Sections\Subscriptions\Repositories\EloquentSubscriptionRepository;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Event;
 
 class SubscriptionServiceProvider extends AwemaProvider
 {
@@ -34,6 +36,8 @@ class SubscriptionServiceProvider extends AwemaProvider
         app('subscription')->includeLangJs();
         app('subscription')->menuMerge();
         app('subscription')->mergePermissions();
+        app('subscription')->addWidgets();
+        Event::subscribe(EventSubscriber::class);
         parent::boot();
     }
 

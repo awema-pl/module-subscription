@@ -76,5 +76,17 @@ return [
         'confirm' =>'Potwierdź',
         'save' => 'Zapisz',
         'all_memberships_for_this_option_will_be_delete' =>'Wszystkie członkostwa tej opcji zostaną usunięte.',
+    ],
+    'widget'=>[
+        'membership'=>[
+            'subscription' =>'Subskrypcja',
+            'information_paid_access' =>'Informacja o płatnym dostępie do usług :appName.',
+            'days_left_until_expiry' =>'Pozostało dni do wygaśnięcia',
+            'your_subscription' =>'Twoja subskrypcja',
+            'subscription_has_expired' =>'Twoja subskrypcja wygasła',
+            'no_subscription' =>'Brak subskrypcji',
+            'trial' =>'Próbna',
+            'standard' =>'Standardowa',
+        ]
     ]
 ];

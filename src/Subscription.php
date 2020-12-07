@@ -6,6 +6,7 @@ use Illuminate\Database\Migrations\Migrator;
 use Illuminate\Routing\Router;
 use AwemaPL\Subscription\Contracts\Subscription as SubscriptionContract;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
@@ -297,5 +298,20 @@ class Subscription implements SubscriptionContract
                 File::put($path, $content);
             }
         }
+    }
+
+    /**
+     * Add widgets
+     */
+    public function addWidgets(){
+
+
+        $view = view('subscription::widgets.memberships.index');
+        $array = config('starter.widgets', []);
+        array_push($array, [
+            'view' =>$view,
+            'order' => 50,
+        ]);
+        config(['starter.widgets'=> $array]);
     }
 }

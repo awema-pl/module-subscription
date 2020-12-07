@@ -47,4 +47,9 @@ interface Subscription
      * @throws \ReflectionException
      */
     public function registerUserHasSucription();
+
+    /**
+     * Add widgets
+     */
+    public function addWidgets();
 }

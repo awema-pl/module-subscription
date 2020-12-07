@@ -2,7 +2,7 @@
     <h4>{{ _p('subscription::pages.widget.membership.subscription', 'Subscription') }}</h4>
     <div class="card">
         <div class="card-body">
-            <h5>{{ _p('subscription::pages.widget.membership.information_paid_access', 'Information on paid access to :appName services.', ['appName' =>config('app.name')]) }}</h5>
+            <h5>{{ _p('subscription::pages.widget.membership.information_access', 'Information on access to :appName services.', ['appName' =>config('app.name')]) }}</h5>
             @if($membership = Auth::user()->membership)
                 <p>
                     {{ _p('subscription::pages.widget.membership.your_subscription', 'Your subscription') }}:

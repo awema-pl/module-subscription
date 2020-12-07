@@ -80,7 +80,7 @@ return [
     'widget'=>[
         'membership'=>[
             'subscription' =>'Subskrypcja',
-            'information_paid_access' =>'Informacja o płatnym dostępie do usług :appName.',
+            'information_access' =>'Informacja o dostępie do usług :appName.',
             'days_left_until_expiry' =>'Pozostało dni do wygaśnięcia',
             'your_subscription' =>'Twoja subskrypcja',
             'subscription_has_expired' =>'Twoja subskrypcja wygasła',

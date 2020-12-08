@@ -58,7 +58,8 @@ return [
             "standard" => "Standard",
             "no_subscription" => "No subscription",
             "trial" => "Trial",
-            "days_left_until_expiry" => "Days left until expiry"
+            "days_left_until_expiry" => "Days left until expiry",
+            "information_access" => "Information on access to :appName services."
         ]
     ]
 ];
